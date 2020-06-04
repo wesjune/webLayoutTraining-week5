@@ -1,0 +1,37 @@
+.profilePicture {
+    object-fit: cover;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.adminPhoto {
+    object-fit: cover;
+    width: 10rem;
+    height: 10rem;
+}
+
+.assignments {
+    min-width: 20rem;
+}
+
+.opacity-10 {
+    opacity: 1;
+}
+
+.expandArrow {
+    .material-icons {
+        transition: .4s all ease;
+    }
+
+    &[aria-expanded="true"] {
+        .material-icons {
+            transform: rotate(-180deg);
+        }
+    }
+
+    &[aria-expanded="false"] {
+        .material-icons {
+            transform: rotate(0);
+        }
+    }
+}

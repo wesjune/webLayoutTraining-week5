@@ -1,0 +1,30 @@
+.sidebar {
+    min-width: max-content;
+    width: 296 / 1280 * 100%;
+    max-width: 18.5rem;
+
+    @media (max-width: 62em) {
+        max-width: max-content;
+    }
+}
+
+.menu {
+    &__item {
+        position: relative;
+
+        &--active {
+            color: $primary;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: .25rem;
+                height: 100%;
+                background: $primary;
+                // border-left: .25rem solid $primary;
+            }
+        }
+    }
+}
