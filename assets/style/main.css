@@ -12905,97 +12905,6 @@ a.text-dark:hover, a.text-dark:focus {
   }
 }
 
-.table th,
-.table td {
-  padding-right: .25rem;
-  padding-left: .25rem;
-  border: none;
-  border-bottom: 1px solid #CDDDCD;
-  white-space: nowrap;
-}
-
-.table thead th {
-  border-bottom: 1px solid #121212;
-}
-
-.table thead th:first-of-type .material-icons {
-  margin-top: -3px;
-}
-
-.table tbody th {
-  font-weight: normal;
-}
-
-.table-hover > tbody > tr:hover {
-  background: #edf4ee;
-}
-
-.form-control,
-.custom-select-lg {
-  height: 3.25rem;
-  border-radius: .125rem;
-}
-
-.form-check-input {
-  width: 1.125rem;
-  height: 1.125rem;
-  margin-top: .2rem;
-}
-
-.modal-dialog-centered .close {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-}
-
-.page-link {
-  padding: .375rem .75rem;
-}
-
-.dropdown-toggle::after {
-  display: none;
-}
-
-.profilePicture {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
-.adminPhoto {
-  -o-object-fit: cover;
-     object-fit: cover;
-  width: 10rem;
-  height: 10rem;
-}
-
-.assignments {
-  min-width: 20rem;
-}
-
-.opacity-10 {
-  opacity: 1;
-}
-
-.expandArrow .material-icons {
-  -webkit-transition: .4s all ease;
-  -o-transition: .4s all ease;
-  transition: .4s all ease;
-}
-
-.expandArrow[aria-expanded="true"] .material-icons {
-  -webkit-transform: rotate(-180deg);
-      -ms-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-}
-
-.expandArrow[aria-expanded="false"] .material-icons {
-  -webkit-transform: rotate(0);
-      -ms-transform: rotate(0);
-          transform: rotate(0);
-}
-
 *,
 *::before,
 *::after {
@@ -13060,6 +12969,7 @@ body {
 }
 
 code {
+  padding: 0 .25rem;
   background-color: #edf4ee;
   color: #2a8356;
   font-family: 'Roboto Mono', monospace;
@@ -13099,27 +13009,51 @@ small {
 }
 
 .text-black-60 {
-  color: #0000009a;
+  color: rgba(0, 0, 0, 0.6);
 }
 
-.btn {
-  padding: .5rem 2rem;
-  border-radius: .125rem;
+/**
+ * Utilities
+ */
+.profilePicture {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 2.5rem;
+  height: 2.5rem;
 }
 
+.adminPhoto {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 10rem;
+  height: 10rem;
+}
+
+.opacity-10 {
+  opacity: 1;
+}
+
+/**
+ * Layouts
+ */
 .sidebar {
+  max-width: 18.5rem;
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
-  width: 23.125%;
-  max-width: 18.5rem;
 }
 
-@media (max-width: 62em) {
+@media (max-width: 1199.98px) {
   .sidebar {
     max-width: -webkit-max-content;
     max-width: -moz-max-content;
     max-width: max-content;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .sidebar {
+    max-width: 100%;
   }
 }
 
@@ -13139,6 +13073,111 @@ small {
   width: .25rem;
   height: 100%;
   background: #2a8356;
+}
+
+.assignments {
+  min-width: 19rem;
+  max-width: 21rem;
+}
+
+.assignments li:hover {
+  background-color: #edf4ee;
+}
+
+.messages {
+  min-width: 25rem;
+}
+
+.replyEditor {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+/**
+ * Overwrite Bootstrap default styles
+ */
+.btn {
+  padding: .5rem 2rem;
+  border-radius: .125rem;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+.dropleft .dropdown-toggle::before {
+  display: none;
+}
+
+.page-link {
+  padding: .375rem .75rem;
+}
+
+.modal-dialog-centered .close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+}
+
+.form-control,
+.custom-select-lg {
+  height: 3.25rem;
+  border-radius: .125rem;
+}
+
+.form-check-input, .form-check-label {
+  cursor: pointer;
+}
+
+.form-check-input {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-top: .2rem;
+}
+
+.expandArrow .material-icons {
+  -webkit-transition: .4s all ease;
+  -o-transition: .4s all ease;
+  transition: .4s all ease;
+}
+
+.expandArrow[aria-expanded="true"] .material-icons {
+  -webkit-transform: rotate(-180deg);
+      -ms-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+}
+
+.expandArrow[aria-expanded="false"] .material-icons {
+  -webkit-transform: rotate(0);
+      -ms-transform: rotate(0);
+          transform: rotate(0);
+}
+
+.table th,
+.table td {
+  padding-right: .25rem;
+  padding-left: .25rem;
+  border: none;
+  border-bottom: 1px solid #CDDDCD;
+  white-space: nowrap;
+}
+
+.table thead th {
+  border-bottom: 1px solid #121212;
+}
+
+.table thead th:first-of-type .material-icons {
+  margin-top: -3px;
+}
+
+.table tbody th {
+  font-weight: normal;
+}
+
+.table-hover > tbody > tr:hover {
+  background: #edf4ee;
 }
 
 /*# sourceMappingURL=main.css.map */
