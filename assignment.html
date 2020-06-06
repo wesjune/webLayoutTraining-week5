@@ -11,6 +11,10 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
   <link rel="stylesheet" href="assets/style/main.css">
 
+  <link rel="apple-touch-icon" sizes="120x120" href="assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/images/favicon/favicon-16x16.png">
+
   <script src="assets/js/vendors.js"></script>
   <script src="assets/js/all.js" defer></script>
 </head>
@@ -18,7 +22,7 @@
 <body>
   <div class="container-fluid h-100">
     <div class="row h-100 flex-column flex-nowrap flex-md-wrap flex-md-row">
-      <aside class="sidebar col d-flex flex-column p-8 bg-secondary">
+      <aside class="sidebar col d-flex flex-shrink-0 flex-column p-8 bg-secondary">
         <h1 class="mb-8">
           <a href="#">
             <img src="./assets/images/logo-ANSWER.svg" alt="ANSWER Logo">
@@ -82,8 +86,8 @@
       </aside>
 
       
-<main class="col flex-grow-1 p-8">
-  <header class="d-flex align-items-center mb-8">
+<main class="assignment col flex-grow-1 p-4 p-md-8">
+  <header class="d-flex flex-wrap align-items-center mb-8">
     <h2 class="heading-2 mr-9">Assignment</h2>
 
     <div class="dropdown mr-auto">
@@ -101,12 +105,19 @@
       </div>
     </div>
 
-    <a href="javascript:;" class="mr-6">
-      <span class="material-icons align-bottom">search</span>
-    </a>
-    <a href="javascript:;">
-      <span class="material-icons align-bottom">notifications_active</span>
-    </a>
+    <div class="d-flex align-items-center">
+      <form class="form-inline">
+        <input type="search" class="form-control py-0 pl-8 mr-n8" placeholder="Search" aria-label="Search">
+  
+        <button type="submit" class="btn p-0 border-0">
+          <a href="javascript:;" class="material-icons align-bottom">search</a>
+        </button>
+      </form>
+      
+      <a href="javascript:;" class="ml-6">
+        <span class="material-icons align-bottom">notifications_active</span>
+      </a>
+    </div>
   </header>
 
   <div class="row m-0">
@@ -252,7 +263,7 @@
         </div>
       </article>
 
-      <div class="d-flex justify-content-between align-items-center">
+      <div class="d-flex flex-wrap justify-content-between align-items-center">
         <div class="d-flex">
           <a href="javascript:;" class="mr-6">
             <span class="material-icons align-bottom">navigate_before</span>

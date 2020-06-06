@@ -12919,7 +12919,6 @@ body {
   min-height: -webkit-fill-available;
   min-height: -moz-available;
   min-height: fill-available;
-  color: #121212;
 }
 
 a {
@@ -12965,6 +12964,7 @@ hr {
 }
 
 body {
+  color: #121212;
   font-family: Lato, sans-serif;
 }
 
@@ -13012,9 +13012,6 @@ small {
   color: rgba(0, 0, 0, 0.6);
 }
 
-/**
- * Utilities
- */
 .profilePicture {
   -o-object-fit: cover;
      object-fit: cover;
@@ -13029,6 +13026,9 @@ small {
   height: 10rem;
 }
 
+/**
+ * Utilities
+ */
 .opacity-10 {
   opacity: 1;
 }
@@ -13088,6 +13088,12 @@ small {
   min-width: 25rem;
 }
 
+@media (max-width: 575.98px) {
+  .messages {
+    min-width: 20rem;
+  }
+}
+
 .replyEditor {
   position: absolute;
   bottom: 0;
@@ -13121,10 +13127,34 @@ small {
   right: 2rem;
 }
 
+.form-inline:focus-within [type="search"] {
+  display: inline-block;
+}
+
+.form-inline:focus-within [type="submit"] {
+  -webkit-transform: translateX(-11rem);
+      -ms-transform: translateX(-11rem);
+          transform: translateX(-11rem);
+}
+
+.form-inline [type="submit"] {
+  -webkit-transition: -webkit-transform .4s ease-in-out;
+  transition: -webkit-transform .4s ease-in-out;
+  -o-transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out;
+  transition: transform .4s ease-in-out, -webkit-transform .4s ease-in-out;
+}
+
 .form-control,
 .custom-select-lg {
   height: 3.25rem;
   border-radius: .125rem;
+}
+
+.form-control[type="search"],
+.custom-select-lg[type="search"] {
+  display: none;
+  height: 2.5rem;
 }
 
 .form-check-input, .form-check-label {
