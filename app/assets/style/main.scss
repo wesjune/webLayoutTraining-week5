@@ -1,14 +1,8 @@
 @import "functions";
-@import "vendors/variables";
+@import "variables";
 @import "bootstrap";
-@import "vendors/modifiedBootstrap";
-
-@import "abstracts/mixins";
-@import "abstracts/utilities";
 
 @import "base/reset";
 @import "base/typography";
 
-@import "components/button";
-
-@import "layouts/sidebar";
+@import "custom";

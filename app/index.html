@@ -1,7 +1,12 @@
 ---
-title: Dashboard
+title: Dashboard of ANSWER
 layout: ./app/layout.ejs
 engine: ejs
 current: index
 ---
 
+<script>
+  $(document).ready(() => {
+    $(".menu__item:contains('Dashboard')").addClass('menu__item--active');
+  });
+</script>

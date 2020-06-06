@@ -5,7 +5,7 @@ engine: ejs
 current: admin
 ---
 
-<main class="col flex-grow-1 p-8">
+<main class="admin col flex-grow-1 p-8">
   <header class="d-flex align-items-center mb-8">
     <h2 class="heading-2 mr-9">Admin</h2>
 
@@ -98,12 +98,19 @@ current: admin
       </div>
     </div>
 
-    <a href="javascript:;" class="mr-6">
-      <span class="material-icons align-bottom">search</span>
-    </a>
-    <a href="javascript:;">
-      <span class="material-icons align-bottom">notifications_active</span>
-    </a>
+    <div class="d-flex align-items-center">
+      <form class="form-inline">
+        <input type="search" class="form-control py-0 pl-8 mr-n8" placeholder="Search" aria-label="Search">
+  
+        <button type="submit" class="btn p-0 border-0">
+          <a href="javascript:;" class="material-icons align-bottom">search</a>
+        </button>
+      </form>
+      
+      <a href="javascript:;" class="ml-6">
+        <span class="material-icons align-bottom">notifications_active</span>
+      </a>
+    </div>
   </header>
 
   <div class="table-responsive">
@@ -412,24 +419,24 @@ current: admin
 
           <h5 class="mb-4 font-weight-bold">Custom Access</h5>
           <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" value="" id="customAccess1">
-            <label class="form-check-label ml-2" for="customAccess1">Lecture</label>
+            <input class="form-check-input" type="checkbox" value="" id="editAdminCustomAccess1">
+            <label class="form-check-label ml-2" for="editAdminCustomAccess1">Lecture</label>
           </div>
           <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" value="" id="customAccess2">
-            <label class="form-check-label ml-2" for="customAccess2">Coupon</label>
+            <input class="form-check-input" type="checkbox" value="" id="editAdminCustomAccess2">
+            <label class="form-check-label ml-2" for="editAdminCustomAccess2">Coupon</label>
           </div>
           <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" value="" id="customAccess3">
-            <label class="form-check-label ml-2" for="customAccess3">Message</label>
+            <input class="form-check-input" type="checkbox" value="" id="editAdminCustomAccess3">
+            <label class="form-check-label ml-2" for="editAdminCustomAccess3">Message</label>
           </div>
           <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" value="" id="customAccess4">
-            <label class="form-check-label ml-2" for="customAccess4">Setting</label>
+            <input class="form-check-input" type="checkbox" value="" id="editAdminCustomAccess4">
+            <label class="form-check-label ml-2" for="editAdminCustomAccess4">Setting</label>
           </div>
           <div class="form-check mb-4">
-            <input class="form-check-input" type="checkbox" value="" id="customAccess5">
-            <label class="form-check-label ml-2" for="customAccess5">Task Menu</label>
+            <input class="form-check-input" type="checkbox" value="" id="editAdminCustomAccess5">
+            <label class="form-check-label ml-2" for="editAdminCustomAccess5">Task Menu</label>
           </div>
 
           <hr class="my-6">
@@ -451,3 +458,9 @@ current: admin
     </div>
   </div>
 </main>
+
+<script>
+  $(document).ready(() => {
+    $(".menu__item:contains('Admin')").addClass('menu__item--active');
+  });
+</script>

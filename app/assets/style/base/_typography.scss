@@ -1,8 +1,10 @@
 body {
+    color: #121212;
     font-family: Lato, sans-serif;
 }
 
 code {
+    padding: 0 .25rem;
     background-color: $secondary;
     color: $primary;
     font-family: 'Roboto Mono', monospace;
@@ -46,5 +48,6 @@ small {
 }
 
 .text-black-60 {
-    color: #0000009a;
+    // color: #0000009a;
+    color: rgba(0, 0, 0, .6);
 }
