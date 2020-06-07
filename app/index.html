@@ -1,9 +1,48 @@
 ---
-title: Dashboard of ANSWER
+title: ANSWER Dashboard
 layout: ./app/layout.ejs
 engine: ejs
 current: index
 ---
+
+<main class="assignment col flex-grow-1 d-flex flex-column p-4 p-md-8">
+  <header class="d-flex flex-wrap align-items-center">
+    <h2 class="heading-2 mr-9">Dashboard</h2>
+
+    <div class="dropdown mr-auto">
+      <button type="button" id="dropdownCourses" class="btn dropdown-toggle d-flex align-items-center px-2 font-weight-bold" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        All Courses
+        <span class="material-icons pl-2 text-primary">keyboard_arrow_down</span>
+      </button>
+
+      <div class="dropdown-menu" aria-labelledby="dropdownCourses">
+        <a href="#" class="dropdown-item">HTML & CSS</a>
+        <a href="#" class="dropdown-item">Sass</a>
+        <a href="#" class="dropdown-item">JavaScript</a>
+        <div class="dropdown-divider"></div>
+        <a href="#" class="dropdown-item">All Courses</a>
+      </div>
+    </div>
+
+    <div class="d-flex align-items-center">
+      <form class="form-inline">
+        <input type="search" class="form-control py-0 pl-8 mr-n8" placeholder="Search" aria-label="Search">
+  
+        <button type="submit" class="btn p-0 border-0">
+          <a href="javascript:;" class="material-icons align-bottom">search</a>
+        </button>
+      </form>
+      
+      <a href="javascript:;" class="ml-6">
+        <span class="material-icons align-bottom">notifications_active</span>
+      </a>
+    </div>
+  </header>
+
+  <div class="flex-grow-1 d-flex justify-content-center align-items-center">
+    <h3 class="h3">你是不是在期待這裡會有什麼？</h3>
+  </div>
+</main>
 
 <script>
   $(document).ready(() => {
