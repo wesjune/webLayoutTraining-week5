@@ -13041,6 +13041,9 @@ small {
   min-width: -webkit-max-content;
   min-width: -moz-max-content;
   min-width: max-content;
+  min-height: -webkit-max-content;
+  min-height: -moz-max-content;
+  min-height: max-content;
 }
 
 @media (max-width: 1199.98px) {
